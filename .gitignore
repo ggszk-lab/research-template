@@ -1,0 +1,36 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# R
+.Rhistory
+.RData
+.Rproj.user/
+
+# Jupyter
+*.nbconvert.ipynb
+
+# Data & artifacts (default: ignore large/derived outputs)
+01_data/raw/**
+01_data/interim/**
+01_data/processed/**
+03_results/exports/**
+
+# Allow folder placeholders
+!**/.gitkeep
+
+# Logs
+*.log
