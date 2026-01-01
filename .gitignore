@@ -5,6 +5,9 @@
 .vscode/
 .idea/
 
+# VS Code workspace
+*.code-workspace
+
 # Python
 __pycache__/
 *.py[cod]
