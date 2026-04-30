@@ -5,6 +5,10 @@
 .vscode/
 .idea/
 
+# Claude Code（settings.json と commands/ はコミット、ローカル上書き等は ignore）
+.claude/settings.local.json
+.claude/.credentials.json
+
 # VS Code workspace（テンプレ提供の workspace.code-workspace のみ commit する）
 *.code-workspace
 !workspace.code-workspace

@@ -19,6 +19,9 @@ research-template/
 ├── .gitignore
 ├── workspace.code-workspace           # VSCode は必ずこれ経由で開く
 ├── CLAUDE.md                          # AI設定: Claude Code 向け指示
+├── .claude/                           # AI設定: Claude Code 向けの権限・スラッシュコマンド
+│   ├── settings.json                  # 権限ガード（raw データ等への書き込み禁止）
+│   └── commands/                      # プロジェクト内スラッシュコマンド
 ├── .github/
 │   └── copilot-instructions.md        # AI設定: GitHub Copilot 向け指示
 ├── 00_context/
@@ -114,8 +117,19 @@ CLAUDE.md / .github/copilot-instructions.md
 
 | ファイル | 対象ツール |
 |---|---|
-| `CLAUDE.md` | Claude Code |
+| `CLAUDE.md` | Claude Code（指示書） |
+| `.claude/settings.json` | Claude Code（権限ガード・allowlist） |
+| `.claude/commands/*.md` | Claude Code（プロジェクト内スラッシュコマンド） |
 | `.github/copilot-instructions.md` | GitHub Copilot |
+
+#### `.claude/` の中身
+
+- **`settings.json`** — `01_data/raw/**` と `04_docs/literature/_papers/**` への書き込みを harness レベルで禁止し、CLAUDE.md の「raw は不変」ルールを強制します。読み取り系の Bash（`ls`, `wc`, `head`, `git status` 等）を allowlist に入れて許可プロンプトを減らしています。
+- **`commands/`** — テンプレート同梱のスラッシュコマンド：
+  - `/check-context` — `00_context/context.md` と `decisions.md` を読んで現状を要約
+  - `/log-decision <内容>` — `decisions.md` に日付付きで判断を追記
+  - `/new-analysis <名前>` — `02_work/analysis/YYYY-MM-DD_<名前>/` に分析フォルダと README 雛形を作成
+- 個人ローカルの上書きは `.claude/settings.local.json` に書く想定で、こちらは `.gitignore` 済みです。
 
 ### 他のAIツールを使う場合
 
