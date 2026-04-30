@@ -4,6 +4,7 @@
 
 ## 使い方（GitHub Template Repository想定）
 - このリポジトリを Template として利用し、新しい研究プロジェクトを作成します。
+- **VSCode は必ず `workspace.code-workspace` 経由で開きます**（フォルダ直開きしない）。AI コーディングツール（Claude Code 等）の履歴がワークスペース識別子に紐づくため、最初からワークスペースで開くと履歴が分断されません。後日 multi-root に拡張しても識別子は変わりません。
 - まず `00_context/context.md` を埋めて、研究の目的・範囲・制約を固定します。
 - 重要な方針変更は `00_context/decisions.md` に記録します。
 - データの取扱い（PII/機微情報/公開範囲）は `00_admin/data_policy.md` に明文化します。
@@ -16,6 +17,7 @@ research-template/
 ├── README.md
 ├── LICENSE
 ├── .gitignore
+├── workspace.code-workspace           # VSCode は必ずこれ経由で開く
 ├── CLAUDE.md                          # AI設定: Claude Code 向け指示
 ├── .github/
 │   └── copilot-instructions.md        # AI設定: GitHub Copilot 向け指示

@@ -5,8 +5,9 @@
 .vscode/
 .idea/
 
-# VS Code workspace
+# VS Code workspace（テンプレ提供の workspace.code-workspace のみ commit する）
 *.code-workspace
+!workspace.code-workspace
 
 # Python
 __pycache__/
