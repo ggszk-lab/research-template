@@ -32,6 +32,9 @@ venv/
 01_data/processed/**
 03_results/exports/**
 
+# Literature PDFs (copyright)
+04_docs/literature/_papers/**
+
 # Allow folder placeholders
 !**/.gitkeep
 

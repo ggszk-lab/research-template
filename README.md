@@ -45,6 +45,10 @@ research-template/
     │   ├── figures/
     │   ├── tables/
     │   └── references.bib
+    ├── literature/       # 先行研究の精読メモ（references.bib と1対1対応）
+    │   ├── README.md
+    │   ├── _template.md
+    │   └── _papers/      # PDF（.gitignore 済）
     ├── slides/
     └── notes/            # 分析に紐づかない記録（調査メモ・議事録・アイデア）
 ```
@@ -77,9 +81,13 @@ research-template/
 - `exports/`: 共有用のCSV/画像などの出力（自動生成物を想定）。
 
 ### 04_docs/
-- `paper/`: 論文原稿・図・表・参考文献を分離して管理。
+- `paper/`: 自分が書く論文の原稿・図・表・参考文献（`references.bib`）を分離して管理。
+- `literature/`: 先行研究の精読メモを `<bibkey>.md` の単位で蓄積（`paper/references.bib` の各エントリと1対1対応）。PDF は `_papers/` に置き `.gitignore` 済。
 - `slides/`: 発表資料。
 - `notes/`: 分析に紐づかない記録（調査メモ・議事録・落ちたアイデア）。
+
+> **`paper/` と `literature/` の違い:**
+> `paper/` は **自分が書く** 1 本の論文用（単数）、`literature/` は **他人が書いた** 論文の精読メモ集（集合）です。
 
 > **`03_results/reports/` と `04_docs/notes/` の違い:**
 > `reports/` は分析結果やデータに基づく報告文書、`notes/` は調査段階のメモや議事録など分析と直接紐づかない記録です。
