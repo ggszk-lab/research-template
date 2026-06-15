@@ -50,6 +50,7 @@ literature/
 `status` は以下のいずれか：
 
 - `queued` — 入手済だが未読
+- `reading` — 読書中（任意。中間状態を追いたいプロジェクトのみ）
 - `read` — 読了、メモ充足
 - `skim` — 流し読みのみ
 - `not_obtained` — 書誌は判明したが本文（PDF）が未入手
