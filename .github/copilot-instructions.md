@@ -9,6 +9,7 @@
 
 - `00_context/context.md` — 研究の前提（目的・RQ・範囲・制約・成功基準）
 - `00_context/decisions.md` — 重要な判断・方針変更の履歴
+- `00_admin/todo.md` — 作業ダッシュボード。「次に何をするか」の入口
 - `00_admin/data_policy.md` — データの取扱い・公開範囲
 
 ## 作業規約

@@ -6,6 +6,7 @@
 - [ ] 研究目的・RQが `00_context/context.md` と一致
 - [ ] 重要な判断が `00_context/decisions.md` に記録
 - [ ] データ取扱いが `00_admin/data_policy.md` に準拠
+- [ ] `00_admin/todo.md` の状態・完了項目が最新（`/update-todo`）
 
 ## 再現性
 - [ ] 実行手順（環境 / 依存 / コマンド）を記載

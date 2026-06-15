@@ -9,6 +9,7 @@
 
 - `00_context/context.md` — 研究の前提（目的・RQ・範囲・制約・成功基準）
 - `00_context/decisions.md` — 重要な判断・方針変更の履歴
+- `00_admin/todo.md` — 作業ダッシュボード。「次に何をするか」の入口
 - `00_admin/data_policy.md` — データの取扱い・公開範囲
 
 ## 作業規約
@@ -27,3 +28,21 @@
 - `02_work/` — 作業ファイル（前処理・分析・共通コード）
 - `03_results/` — 分析結果とその出力
 - `04_docs/` — 対外的な成果物（論文・スライド・記録）
+
+## コマンドとスキル
+
+定型作業はコマンド・スキルにまとめてある。
+
+プロジェクト内コマンド（`.claude/commands/`）:
+
+- `/check-context` — context.md と decisions.md を読んで現況を要約
+- `/log-decision` — 重要な判断を decisions.md に日付付きで追記
+- `/new-analysis` — 日付付きの分析フォルダと README 雛形を作成
+- `/update-todo` — `00_admin/todo.md` を git log・decisions.md と突き合わせて更新
+
+論文調査まわり（ユーザーレベルのスキル、全研究プロジェクト共通）:
+
+- `lit-survey` — 先行研究サーベイ（広域／的撃ち）。成果物は `04_docs/notes/lit_survey_<date>.md`
+- `verify-citations` — 完成原稿の引用を書誌・主張レベルで照合・検証
+
+先行研究の作業の全体像は `04_docs/literature/README.md` を参照。
