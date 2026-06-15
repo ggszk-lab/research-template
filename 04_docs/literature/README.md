@@ -23,14 +23,15 @@
 
 ```
 literature/
-├── README.md          # このファイル
-├── _template.md       # ② 精読メモのテンプレート
-├── _survey_template.md # ① サーベイノートのテンプレート
-├── _papers/           # 文献 PDF（gitignore 対象、ローカルのみ）
-└── <bibkey>.md        # 各文献の精読メモ
+├── README.md               # このファイル
+├── _template.md            # ② 精読メモのテンプレート
+├── _survey_template.md     # ① サーベイノートのテンプレート
+├── _verification_template.md # ③ 引用検証ノートのテンプレート
+├── _papers/                # 文献 PDF（gitignore 対象、ローカルのみ）
+└── <bibkey>.md             # 各文献の精読メモ
 ```
 
-- `<bibkey>` は `references.bib` のキーと揃える（例：`fletcher1975.md`）
+- `<bibkey>` は `author-year-word` 形式（筆頭著者姓＋年＋タイトルの特徴語。例：`fletcher1975`, `almeida2013clarinet`）。`references.bib` のキーと揃える。
 - PDF は `_papers/<bibkey>.pdf` に置く（リポジトリには含めない）
 - 著作権上の理由から PDF は `.gitignore` 済
 
@@ -38,17 +39,25 @@ literature/
 
 `_template.md` をコピーして使います。フロントマターで著者・年・出典・状態を構造化することで、後から横断検索しやすくなります。
 
+**3点セットを常に同期させる（`lit-read` スキルの核）。** bibkey を単一の真実源として、以下が1対1で対応する：
+
+1. `references.bib` のエントリ（`@...{<bibkey>, ...}`）
+2. 精読メモ `04_docs/literature/<bibkey>.md`
+3. 下の「文献ステータス一覧」テーブルの行
+
+文献を1本追加・精読したら、この3つを同時に更新する。
+
 `status` は以下のいずれか：
 
 - `queued` — 入手済だが未読
-- `reading` — 読書中
 - `read` — 読了、メモ充足
 - `skim` — 流し読みのみ
+- `not_obtained` — 書誌は判明したが本文（PDF）が未入手
 
 ## ① サーベイ / ③ 引用検証
 
 - **サーベイ**は `_survey_template.md` を雛形に `04_docs/notes/lit_survey_<date>.md` を作る。広域／的撃ちの2タイプがある。詳細は `/lit-survey` スキル。
-- **引用検証**は完成原稿の引用照合。サーベイとは別活動。詳細は `/verify-citations` スキル。
+- **引用検証**は完成原稿の引用照合。サーベイとは別活動。`_verification_template.md` を雛形に `04_docs/notes/literature_verification.md` を作る。詳細は `/verify-citations` スキル。
 - いずれも LLM＋Web 検索ベースの調査は暫定であり、書誌情報は原著で検証する。
 
 ## 文献ステータス一覧

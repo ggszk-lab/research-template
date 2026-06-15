@@ -6,8 +6,9 @@ venue: Journal / Conference, vol(issue), pp.
 doi:
 url:
 pdf: _papers/example2025.pdf
-status: queued
+status: queued        # queued / read / skim / not_obtained
 tags: []
+# bibnum:            # 任意。references.bib が連番キー（ref_N）の場合のみ、対応する番号を記録
 ---
 
 # 要旨
