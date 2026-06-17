@@ -27,6 +27,8 @@ research-template/
 ├── 00_context/
 │   ├── context.md        # 最重要：研究の文脈（AI/人間共通）
 │   └── decisions.md      # 重要な判断・方針変更のログ
+├── 00_planning/          # 計画・構想ノート（Obsidian から卒業した検討中の方向性）
+│   └── README.md
 ├── 00_admin/
 │   ├── data_policy.md    # データ・個人情報・公開範囲
 │   ├── environment.md    # 実行環境・再現性情報
@@ -63,6 +65,11 @@ research-template/
 ### 00_context/（最優先）
 - `context.md`: 研究の「前提」を1つに集約します（目的、RQ、範囲、制約、成功基準）。
 - `decisions.md`: 重要な判断を、理由と影響範囲つきで残します。
+
+### 00_planning/
+- プロジェクト固有の計画・構想ノート（アイデア検討・定式化・実験計画・次の方向性）を置きます。
+- `00_context/` が「確定した前提」なのに対し、`00_planning/` は「動いている思考」。固まったら `context.md` / `decisions.md` へ昇格させます。
+- 研究を Obsidian 起点で始める場合、repo 作成時に Vault のプロジェクト固有ノートをここへ「卒業」させ、Vault 側はフォルダ symlink（正本=repo・Obsidian=ビューア、`literature`/`paper` と同じ向き）に置き換えます。横断ファイルは Vault に残します。詳細は `00_planning/README.md`。
 
 ### 00_admin/
 - `data_policy.md`: データ分類・アクセス権限・匿名化・公開方針などを定義します。
