@@ -30,6 +30,7 @@ $(TARGET).dvi: $(TARGET).tex
 	-$(BIBTEX) $(TARGET)
 	$(LATEX) $(TARGET).tex
 	$(LATEX) $(TARGET).tex
+	$(LATEX) $(TARGET).tex   # 4 パス目: 全幅フロート等のラベル収束用（保険）
 
 ## ビルド → 機械チェック（未定義引用/未解決参照/図欠落/overfull/bibtex/ページ数）
 check: $(TARGET).dvi
