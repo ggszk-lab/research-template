@@ -4,9 +4,9 @@
 
 | 活動 | 何をするか | 成果物 | 進め方 |
 |---|---|---|---|
-| ① サーベイ | 領域を掃く／特定の新規性主張の prior art を確認する | `04_docs/notes/lit_survey_<date>.md` | `/lit-survey` スキル・`_survey_template.md` |
+| ① サーベイ | 領域を掃く／特定の新規性主張の prior art を確認する | `04_docs/notes/lit_survey_<topic>_<date>.md` | `/lit-survey` スキル・`_survey_template.md` |
 | ② 精読メモ | 文献1本を精読し構造化して残す | `04_docs/literature/<bibkey>.md` | `_template.md` をコピー |
-| ③ 引用検証 | 完成原稿の引用を書誌・主張レベルで照合する | `04_docs/notes/literature_verification.md` | `/verify-citations` スキル |
+| ③ 引用検証 | 完成原稿の引用を書誌・主張レベルで照合する | `04_docs/notes/literature_verification_<instance>.md` | `/verify-citations` スキル・`_verification_template.md` |
 
 このディレクトリは主に **② 精読メモ**を束ねる場所。①③のノートは `04_docs/notes/` に置くが、雛形と進め方はここに集約する。
 
@@ -57,8 +57,8 @@ literature/
 
 ## ① サーベイ / ③ 引用検証
 
-- **サーベイ**は `_survey_template.md` を雛形に `04_docs/notes/lit_survey_<date>.md` を作る。広域／的撃ちの2タイプがある。詳細は `/lit-survey` スキル。
-- **引用検証**は完成原稿の引用照合。サーベイとは別活動。`_verification_template.md` を雛形に `04_docs/notes/literature_verification.md` を作る。詳細は `/verify-citations` スキル。
+- **サーベイ**は `_survey_template.md` を雛形に `04_docs/notes/lit_survey_<topic>_<date>.md` を作る（`<topic>` は調査内容の短いスラッグ）。広域／的撃ちの2タイプがある。詳細は `/lit-survey` スキル。
+- **引用検証**は完成原稿の引用照合。サーベイとは別活動。`_verification_template.md` を雛形に `04_docs/notes/literature_verification_<instance>.md` を作る（論文インスタンスが1つのプロジェクトでは `literature_verification.md` でよい）。詳細は `/verify-citations` スキル。
 - いずれも LLM＋Web 検索ベースの調査は暫定であり、書誌情報は原著で検証する。
 
 ## 文献ステータス一覧

@@ -43,9 +43,9 @@
 
 論文まわり（ユーザーレベルのスキル、全研究プロジェクト共通）:
 
-- `lit-survey` — 先行研究サーベイ（広域／的撃ち）。成果物は `04_docs/notes/lit_survey_<date>.md`
+- `lit-survey` — 先行研究サーベイ（広域／的撃ち）。成果物は `04_docs/notes/lit_survey_<topic>_<date>.md`
 - `lit-read` — 文献の「登録」（`references.bib`・精読メモ・README 一覧の3点セット）と「精読」。成果物は `04_docs/literature/<bibkey>.md`
-- `verify-citations` — 完成原稿の引用を書誌・主張レベルで照合・検証。成果物は `04_docs/notes/literature_verification.md`
+- `verify-citations` — 完成原稿の引用を書誌・主張レベルで照合・検証。成果物は `04_docs/notes/literature_verification_<instance>.md`
 - `paper-review` — 投稿前の自著原稿をセルフレビュー。成果物は `04_docs/notes/paper_review_<instance>_<date>.md`
 
 先行研究の作業の全体像は `04_docs/literature/README.md` を参照。
